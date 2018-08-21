@@ -1,15 +1,15 @@
-##Project Description
+### Project Description
 
 Building a RESTful API using Flask to predict if a certain image is a cat or a dog.
 
-###Framework and Libraries used:
+### Framework and Libraries used:
 
 - keras with tensorflow backend
 - Flask
 - opencv
 - Docker
 
-###Getting Started Guide
+### Getting Started Guide
 
 Run Docker on your local machine
 
