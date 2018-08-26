@@ -2,6 +2,7 @@ from keras.models import load_model
 import numpy as np
 import cv2
 from flask import Flask, jsonify, request
+from PIL import Image
 
 app = Flask(__name__)
 
@@ -12,6 +13,9 @@ def load_mod():
 
 #Resizing and reshaping the image for getting prediction
 def preprocess_image(image):
+    # if image in not in RGB then convert it
+    if image.mode != "RGB":
+        image = image.convert("RGB")
     image = cv2.resize(image, (150, 150))
     image = image.reshape(1, 150, 150, 3)
     image = 1/255.0 * image
